@@ -1,0 +1,11 @@
+@use '../../Style/Global/base';
+
+.backgroundImage{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
+    #svgImage {
+        fill: base.$secondary-color;
+    }
+}

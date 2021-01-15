@@ -1,0 +1,55 @@
+@use '../../Style/Global/base';
+/* Call to Action Button */
+.cta-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem base.$default-font-size;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  }
+}
+
+/* Title Style */
+.cta-btn--title {
+  background-image: linear-gradient(135deg, base.$primary-color 0%, base.$secondary-color 100%);
+  font-size: 3rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(135deg, base.$primary-color 0%, base.$secondary-color 100%);
+  border-image-slice: 1;
+  cursor: pointer;
+  // Responsive Button hero style
+  
+
+  &::after {
+    background-image: linear-gradient(135deg, base.$primary-color 0%, base.$secondary-color 100%);
+    
+  }
+
+  &:hover {
+    -webkit-text-fill-color: base.$white-color;
+    text-decoration: none;
+    // Responsive Button hover hero style
+    
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
