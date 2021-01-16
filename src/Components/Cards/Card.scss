@@ -1,0 +1,7 @@
+@use '../../Style/Global/base';
+
+.Tilt{
+    background-color: base.$primary-color;
+    height: 30vh;
+    width: 20vh;
+}

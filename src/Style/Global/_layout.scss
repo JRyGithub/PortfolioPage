@@ -1,12 +1,8 @@
-html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-family: sans-serif;
-    text-align: center;
-    }
+@use './base';
 
-section {
-    padding: 5rem 0rem;
-    }
+body {
+    background-color: base.$background-color;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
