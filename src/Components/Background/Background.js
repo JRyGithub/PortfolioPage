@@ -6,7 +6,7 @@ const particleOptions = {
     "autoPlay": true,
     "background": {
       "color": {
-        "value": "#000"
+        "value": "none"
       },
       "image": "",
       "position": "",
@@ -474,12 +474,12 @@ const Background = () => {
             <Particles params={particleOptions}/>
         </div>
         <div id="svgBox">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <rect width="1440" height="320" x="0" y="0" fill="none"></rect>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
+        <rect width="1440" height="200" x="0" y="0" fill="none"></rect>
           <path
             id="svgImage"
             fill-opacity="2"
-            d="M0,32L120,80C240,128,480,224,720,245.3C960,267,1200,213,1320,186.7L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+            d="M0,128L80,112C160,96,320,64,480,90.7C640,117,800,203,960,213.3C1120,224,1280,160,1360,128L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
           ></path>
         </svg>
         </div>
@@ -487,5 +487,5 @@ const Background = () => {
     </span>
   );
 };
-
+//M0,128L80,112C160,96,320,64,480,90.7C640,117,800,203,960,213.3C1120,224,1280,160,1360,128L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z
 export default Background;
