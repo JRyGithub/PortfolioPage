@@ -24,20 +24,20 @@
 
 /* Title Style */
 .cta-btn--title {
-  background-image: linear-gradient(135deg, base.$button-color 0%, base.$secondary-color 100%);
+  background-image: linear-gradient(135deg, base.$primary-color 0%, base.$secondary-color 100%);
   font-size: 2em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-width: 2px;
   border-style: solid;
-  border-image: linear-gradient(135deg, base.$button-color 0%, base.$secondary-color 100%);
+  border-image: linear-gradient(135deg, base.$primary-color 0%, base.$secondary-color 100%);
   border-image-slice: 1;
   cursor: pointer;
   // Responsive Button hero style
   
 
   &::after {
-    background-image: linear-gradient(135deg, base.$button-color 0%, base.$secondary-color 100%);
+    background-image: linear-gradient(135deg, base.$primary-color 0%, base.$secondary-color 100%);
     
   }
 

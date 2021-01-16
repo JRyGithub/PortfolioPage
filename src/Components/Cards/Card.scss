@@ -1,7 +1,13 @@
 @use '../../Style/Global/base';
+@use '../../Style/Global/layout';
 
 .Tilt{
+    //height: 30em;
+    //width: 20em;
+}
+.Tilt:hover{
+    z-index: 3000;
+}
+.bg-base{
     background-color: base.$primary-color;
-    height: 30vh;
-    width: 20vh;
 }

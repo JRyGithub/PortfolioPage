@@ -6,7 +6,6 @@ import './Title.scss';
 const Title = () => {
     return (
         <section className='jumbotron' id='title'>
-            <Background/>
             <container>
             <h1 className="title-title">Hi, My Name is Josh
             <br/>
