@@ -19,6 +19,7 @@
     "gatsby-plugin-sass": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^4.1.0",
     "react-particles-js": "^3.4.1",
     "react-tilt": "^0.1.4",
     "sass": "^1.32.4",

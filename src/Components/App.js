@@ -6,14 +6,18 @@ import Carasol from '../Components/Carosol/Carasol';
 import ProjectTitle from '../Components/ProjectTitle/ProjectTitle';
 import'./App.scss';
 
+import { ProjectData } from '../Data/ProjectData';
+
 const intialState ={
-    route: 'title' //Temp set to Carasol
+    route: 'carasol', //Temp set to Carasol
+    projectData: ''
 }
 
 class  App extends React.Component {
     constructor(){
         super();
         this.state = intialState;
+        this.projectData = ProjectData;
     }
     render(){
         const {route} = this.state;
@@ -26,7 +30,7 @@ class  App extends React.Component {
                     :
                     (
                         <span>
-                            <Carasol />
+                            <Carasol projects={this.projectData}/>
                             <ProjectTitle />
                         </span>
                     )
