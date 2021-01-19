@@ -1,47 +1,51 @@
 import React, { useState } from "react";
 import "./Carasol.scss";
-import { ProjectData} from "../../Data/ProjectData";
+import { ProjectData } from "../../Data/ProjectData";
 import Card from "../Cards/Card";
 import { BsFillCaretRightFill, BsFillCaretLeftFill } from "react-icons/bs";
+import { set } from "object-path";
 
-const Carosol = ({}) => {
-
-    const length = ProjectData.length;
-    const nextSlide = () =>{
-        //setCurrent(current === length - 1? 0 : current + 1);
-        ProjectData.unshift(ProjectData.pop());
-        console.log(ProjectData);
+class Carosol extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      projectData: ProjectData,
+      length: ProjectData.length,
     };
-    const previousSlide = () => {
-        // setCurrent(current === 0 ? length - 1 : current - 1);
-        ProjectData.push(ProjectData.shift());
-        console.log(ProjectData);
-    };
+  }
+  
 
-return (
-    <div className="carosolBox">
-      <div className="carosol flex flex-wrap h-100">
-        <BsFillCaretLeftFill className='icon left' onClick={previousSlide}/>
-        {ProjectData.map(( project, index ) =>{
-            if(index <3){
-            console.log(index);
-            return (
+  nextSlide = () => {
+    this.state.projectData.unshift(this.state.projectData.pop());
+    this.setState(this.state.projectData);
+  };
+  previousSlide = () => {
+    this.state.projectData.push(this.state.projectData.shift());
+    this.setState(this.state.projectData);
+  };
+
+  render() {
+    return (
+      <div className="carosolBox">
+        <div className="carosol flex flex-wrap h-100">
+        { console.log(this.state.projectData)}
+          <BsFillCaretLeftFill className="icon left" onClick={this.previousSlide} />
+          {
+          this.state.projectData.map((project, index) => {
+            if (index < 3) {
+              console.log(index);
+              return (
                 <>
-                    <Card project={project}/>
+                  <Card project={project} />
                 </>
-                );
+              );
             }
-        })}
-        <BsFillCaretRightFill className='icon right' onClick={nextSlide}/>
+          })}
+          <BsFillCaretRightFill className="icon right" onClick={this.nextSlide} />
+        </div>
       </div>
-    </div>
-  );
-};
-//{projects.Map((project, index)=>{
-//             return (<Card />);
-//         })} 
-/* <Card/>
-        <Card/>
-        <Card/> */
+    );
+  }
+}
 
 export default Carosol;
