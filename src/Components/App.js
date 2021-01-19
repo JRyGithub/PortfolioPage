@@ -7,6 +7,7 @@ import ProjectTitle from '../Components/ProjectTitle/ProjectTitle';
 import'./App.scss';
 
 import { ProjectData } from '../Data/ProjectData';
+import FadeIn from "react-fade-in";
 
 const intialState ={
     route: 'title', //Temp set to Carasol
@@ -33,9 +34,11 @@ class  App extends React.Component {
                     <Title onRouteChange={this.onRouteChange}/>
                     :
                     (
-                        <span>
-                            <Carasol projects={ ProjectData }/>
-                            <ProjectTitle onRouteChange={this.onRouteChange}/>
+                        <span>  
+                            <FadeIn  transitionDuration='2000'>
+                                <Carasol projects={ ProjectData }/>
+                                <ProjectTitle onRouteChange={this.onRouteChange}/>
+                            </FadeIn>
                         </span>
                     )
                 }

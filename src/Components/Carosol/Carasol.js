@@ -3,6 +3,7 @@ import "./Carasol.scss";
 import { ProjectData } from "../../Data/ProjectData";
 import Card from "../Cards/Card";
 import { BsFillCaretRightFill, BsFillCaretLeftFill } from "react-icons/bs";
+import FadeIn from "react-fade-in";
 
 class Carosol extends React.Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class Carosol extends React.Component {
       length: ProjectData.length,
     };
   }
-  
 
   nextSlide = () => {
     this.state.projectData.unshift(this.state.projectData.pop());
@@ -25,24 +25,28 @@ class Carosol extends React.Component {
 
   render() {
     return (
-      <div className="carosolBox">
-        <div className="carosol flex flex-wrap h-100">
-        { console.log(this.state.projectData)}
-          <BsFillCaretLeftFill className="icon left" onClick={this.previousSlide} />
-          {
-          this.state.projectData.map((project, index) => {
-            if (index < 3) {
-              console.log(index);
-              return (
-                <>
-                  <Card project={project} />
-                </>
-              );
-            }
-          })}
-          <BsFillCaretRightFill className="icon right" onClick={this.nextSlide} />
+        <div className="carosolBox">
+          <div className="carosol flex flex-wrap h-100">
+            <BsFillCaretLeftFill
+              className="icon left"
+              onClick={this.previousSlide}
+            />
+            {this.state.projectData.map((project, index) => {
+              if (index < 3) {
+                console.log(index);
+                return (
+                  <>
+                    <Card project={project} />
+                  </>
+                );
+              }
+            })}
+            <BsFillCaretRightFill
+              className="icon right"
+              onClick={this.nextSlide}
+            />
+          </div>
         </div>
-      </div>
     );
   }
 }

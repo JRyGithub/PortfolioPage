@@ -1,10 +1,6 @@
 @use '../../Style/Global/base';
 @use '../../Style/Global/layout';
 
-.Tilt{
-    //height: 30em;
-    //width: 20em;
-}
 .Tilt:hover{
     z-index: 3000;
 }
