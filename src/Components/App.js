@@ -30,7 +30,7 @@ class  App extends React.Component {
                     :
                     (
                         <span>
-                            <Carasol projects={this.projectData}/>
+                            <Carasol />
                             <ProjectTitle />
                         </span>
                     )
