@@ -1,9 +1,13 @@
-import * as React from "react"; 
-import Background from "../Background/Background";
+import * as React from "react";
 import Button from "../Button/Button";
 import './Title.scss';
 
-const Title = () => {
+class Title extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    render(){
+    const {onRouteChange} = this.props;
     return (
         <section className='jumbotron' id='title'>
             <container>
@@ -13,11 +17,12 @@ const Title = () => {
             </h1>
             <p className="title-button">
                 <br/>
-                <Button />
+                <span className= "cta-btn cta-btn--title" onClick={() => onRouteChange('carousel')}>Discover more</span>
             </p>
              </container>      
         </section>
     )
+    }
 }
 
 export default Title;

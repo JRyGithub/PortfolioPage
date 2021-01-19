@@ -9,7 +9,7 @@ import'./App.scss';
 import { ProjectData } from '../Data/ProjectData';
 
 const intialState ={
-    route: 'carasol', //Temp set to Carasol
+    route: 'title', //Temp set to Carasol
     projectData: ''
 }
 
@@ -19,6 +19,10 @@ class  App extends React.Component {
         this.state = intialState;
         this.projectData = ProjectData;
     }
+    onRouteChange = (route) => {
+        this.setState({ route: route });
+      }
+
     render(){
         const {route} = this.state;
         return (
@@ -26,12 +30,12 @@ class  App extends React.Component {
                 <Background />
                 {
                     route === 'title' ?
-                    <Title />
+                    <Title onRouteChange={this.onRouteChange}/>
                     :
                     (
                         <span>
                             <Carasol projects={ ProjectData }/>
-                            <ProjectTitle />
+                            <ProjectTitle onRouteChange={this.onRouteChange}/>
                         </span>
                     )
                 }

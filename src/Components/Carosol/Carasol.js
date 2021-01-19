@@ -3,7 +3,6 @@ import "./Carasol.scss";
 import { ProjectData } from "../../Data/ProjectData";
 import Card from "../Cards/Card";
 import { BsFillCaretRightFill, BsFillCaretLeftFill } from "react-icons/bs";
-import { set } from "object-path";
 
 class Carosol extends React.Component {
   constructor(props) {
