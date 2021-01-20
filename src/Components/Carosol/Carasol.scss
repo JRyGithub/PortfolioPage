@@ -3,6 +3,7 @@
 
 .carosol{
     justify-content: center;
+    align-items: center;
 }
 .carosolBox{
     z-index: 1;
@@ -15,4 +16,15 @@
     top:40%;
     font-size: 5em;
     color: base.$primary-color;
+    
+    :hover{
+        color: gray;
+        opacity: 0.2;
+        cursor: pointer;
+    }
+    :focus{
+        color: gray;
+        opacity: 0.2;
+        cursor: pointer;
+    }
 }

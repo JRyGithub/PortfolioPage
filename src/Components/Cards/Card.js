@@ -4,7 +4,8 @@ import "./Card.scss";
 
 const Card = ({project}) => {
     const color = project.color;
-
+    const image = project.image;
+    const desc = project.description;
     // var classes = cx({
     //     'Tilt': true,
     //     'br2': true,
@@ -16,9 +17,12 @@ const Card = ({project}) => {
     // });
     console.log(project.color);
   return (
-    <Tilt className={`Tilt br2 w-20 mr2 bg-base-${color} shadow-5 pointer bg-base`} options={{ max: 5, perspective:500}}>
+    <Tilt className={`Tilt br2 w-20 mr2 bg-base-${color} shadow-5 pointer bg-base h-50`} options={{ max: 5, perspective:500}}>
       <div className="Tilt-inner">
-        <div className=" w-20 mr2 shadow-5 pointer"></div>
+        {image === null ? <div className=""></div> :
+        <img className="pa0 ma0 projectImage shadow-5" src={`${image}`} alt={`${image}`}></img>
+        }
+        
       </div>
     </Tilt>
   );

@@ -25,8 +25,8 @@ class Carosol extends React.Component {
 
   render() {
     return (
-        <div className="carosolBox">
-          <div className="carosol flex flex-wrap h-100">
+        <div className="carosolBox w-100">
+          <div className="carosol flex flex-wrap">
             <BsFillCaretLeftFill
               className="icon left"
               onClick={this.previousSlide}

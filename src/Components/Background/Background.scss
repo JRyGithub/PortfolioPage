@@ -2,7 +2,7 @@
 
 .backgroundImage{
     display: inline-block;
-    position: relative absolute !important;
+    position: relative;
     top: 0px;
     right: 0px;
     z-index: 0;
@@ -29,6 +29,8 @@
 
 .outer-container {
     position: relative;
+    background-color: transparent;
+    z-index: 1;
   }
   
   #particles-js {
@@ -37,10 +39,4 @@
     width: 100%;
     z-index:-10;
     overflow: hidden;
-  }
-  
-  .outer-container {
-    z-index: 1;
-    position: relative;
-    background-color: transparent;
   }
