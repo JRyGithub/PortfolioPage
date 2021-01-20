@@ -3,24 +3,17 @@
 
 .Tilt:hover{
     z-index: 3000;
-}
-.bg-base{
-    background-color: base.$primary-color;
-}
-.bg-base-green{
-    background-color: green;
-}
-.bg-base-blue{
-    background-color: blue;
-}
-.bg-base-red{
-        background-color: red;
-}
-.bg-base-yellow{
-    background-color: yellow;
-}   
-.bg-base-pink{
-    background-color: white;
+    :hover{
+        filter:  grayscale(60%);
+        .ImageDescription{
+            opacity: 1;
+            z-index: 3001;
+            font-weight: 900;
+            filter: none;
+            background-color: white;
+            padding: 1rem;
+        }
+    }
 }
 .projectImage{
     display: block;
@@ -30,5 +23,15 @@
     height:40vh;
 }
 .bg-base-offWhite{
-    background-color: white;
-}       
+    background-color: white;    
+}
+.ImageDescription{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+}   

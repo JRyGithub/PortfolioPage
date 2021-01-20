@@ -5,12 +5,15 @@ h1 {
   font-weight: 700;
 }
 h1,
-p,
 a {
   font-family: 'Montserrat', sans-serif;
   color: base.$primary-color;
 }
+p{
+    font-family: 'Montserrat', sans-serif;
+}
 body {
+    position: relative;
     background-color: base.$background-color;
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -20,6 +23,7 @@ html, body {
     height:100%;
     padding: 0;
     margin: 0;
+    overflow: auto;
 }
 
 //Button CSS
