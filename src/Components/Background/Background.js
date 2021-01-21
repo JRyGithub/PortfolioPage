@@ -6,7 +6,7 @@ const particleOptions = {
     "autoPlay": true,
     "background": {
       "color": {
-        "value": "#272341"
+        "value": "#FFFBFC" //These is key variable to change.
       },
       "image": "",
       "position": "",
@@ -128,7 +128,7 @@ const particleOptions = {
           "quantity": 1,
           "particles": {
             "color": {
-              "value": "#e98f22",
+              "value": "#EC058E", //Trail
               "animation": {
                 "enable": false,
                 "speed": 400,
@@ -213,7 +213,7 @@ const particleOptions = {
             },
             "stroke": {
               "color": {
-                "value": "#000000",
+                "value": "#3500D3", //Test Fail
                 "animation": {
                   "enable": false,
                   "speed": 0,
@@ -275,7 +275,7 @@ const particleOptions = {
         "mode": "bounce"
       },
       "color": {
-        "value": "#ffffff",
+        "value": "#EC058E", //Joins
         "animation": {
           "enable": true,
           "speed": 50,
@@ -304,7 +304,7 @@ const particleOptions = {
       "links": {
         "blink": false,
         "color": {
-          "value": "#ffffff"
+          "value": "#EC058E" //Changes Lines
         },
         "consent": false,
         "distance": 100,
@@ -312,9 +312,9 @@ const particleOptions = {
         "frequency": 1,
         "opacity": 1,
         "shadow": {
-          "blur": true,
+          "blur": false,
           "color": {
-            "value": "#fb9e0c"
+            "value": "#EC058E" //Can give like a show/blur
           },
           "enable": true
         },
@@ -322,7 +322,7 @@ const particleOptions = {
           "enable": false,
           "frequency": 1,
           "color": {
-            "value": "#009b88"
+            "value": "#3500D3" //Test Fail
           }
         },
         "width": 3,
@@ -369,7 +369,7 @@ const particleOptions = {
           "enable": false,
           "length": 10,
           "fillColor": {
-            "value": "#000000"
+            "value": "#3500D3" //Test
           }
         },
         "vibrate": false,
@@ -415,7 +415,7 @@ const particleOptions = {
       "shadow": {
         "blur": 0,
         "color": {
-          "value": "#000000"
+          "value": "#3500D3" //Test
         },
         "enable": false,
         "offset": {

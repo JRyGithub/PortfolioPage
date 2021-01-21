@@ -2,9 +2,12 @@
 @use '../../Style/Global/layout';
 
 .Tilt{
-   
+    border-width: 10px;
+    border: #EC058E;
 }
 .Tilt-inner{
+    border-width: 10px;
+    border: #EC058E;
     
 }
 .Tilt:hover{
@@ -12,6 +15,8 @@
     :hover{
         .projectImage{
             filter:  grayscale(60%);
+            border-width: 10px;
+    border: #EC058E;
         }
         .ImageDescription{  
             filter:  grayscale(0%);
@@ -30,6 +35,7 @@
     min-width: 100%;
     min-height: 100%;
     height:40vh;
+    border: 2px solid gray;
 }
 
 .bg-base-offWhite{
