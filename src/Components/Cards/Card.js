@@ -31,7 +31,7 @@ const Card = ({ project }) => {
               src={`${image}`}
               alt={`${image}`}
             ></img>
-            <div className="ImageDescription"><p>{`${desc}`}</p></div>
+            <div className="ImageDescription"><p className="ImageFont">{`${desc}`}</p></div>
           </>
         )}
       </div>
