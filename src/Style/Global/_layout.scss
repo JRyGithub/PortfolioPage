@@ -27,6 +27,7 @@ html, body {
 }
 
 //Button CSS
+//f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib
 .cta-btn {
   display: inline-block;
   position: relative;
@@ -53,6 +54,7 @@ html, body {
     font-size: 2em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border-radius: 9999px;
     border-width: 2px;
     border-style: solid;
     border-image: linear-gradient(135deg, base.$primary-color 0%, base.$dark-blue-text 100%);

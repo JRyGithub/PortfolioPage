@@ -21,7 +21,7 @@ class Title extends React.Component {
             <p className="title-button">
               <br />
               <span
-                className="cta-btn cta-btn--title"
+                className="cta-btn cta-btn--title grow br-pill"
                 onClick={() => onRouteChange("carousel")}
               >
                 Discover more

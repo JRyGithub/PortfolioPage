@@ -35,7 +35,7 @@ class  App extends React.Component {
                     :
                     (
                         <span>  
-                            <FadeIn  transitionDuration='2000'>
+                            <FadeIn  transitionDuration='3000'>
                                 <Carasol projects={ ProjectData }/>
                                 <ProjectTitle onRouteChange={this.onRouteChange}/>
                             </FadeIn>
