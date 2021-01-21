@@ -1,9 +1,10 @@
 @use '../../Style/Global/base';
 @use '../../Style/Global/layout';
 
-#title {
-    min-height: 40vh;
-    height: 40vh;
+.titleSection {
+       position: relative;
+//     min-height: 40vh;
+       height: 40%;
     align-items: center;
     border-bottom: 0px;
     background: base.$background-color;
@@ -17,10 +18,7 @@
     bottom: 0;
     right: 0;
     z-index: 10;
-  
-    /* background: url("/src/assets/[your-image].png");
-    background-position: center;
-    background-size: cover; */
+
     .title-title {
       font-size: 8em;
       font-weight: 700;

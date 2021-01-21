@@ -11,7 +11,7 @@ class Title extends React.Component {
     const { onRouteChange } = this.props;
     return (
       <FadeIn transitionDuration='2000'>
-        <section className="jumbotron" id="title">
+        <section className="titleSection">
           <container>
             <h1 className="title-title">
               Hi, My Name is Josh

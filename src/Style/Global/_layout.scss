@@ -9,7 +9,8 @@ a {
   font-family: 'Montserrat', sans-serif;
   color: base.$primary-color;
 }
-p{
+p,
+span{
     font-family: 'Montserrat', sans-serif;
 }
 body {
@@ -20,7 +21,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 html, body {
-    height:100%;
+    min-height: 100vh;
+    //height:100%;
     padding: 0;
     margin: 0;
     overflow: auto;
@@ -54,7 +56,6 @@ html, body {
     font-size: 2em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border-radius: 9999px;
     border-width: 2px;
     border-style: solid;
     border-image: linear-gradient(135deg, base.$primary-color 0%, base.$dark-blue-text 100%);
