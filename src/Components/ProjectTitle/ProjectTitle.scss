@@ -4,7 +4,33 @@
 .headlineTitle{
     z-index: 10;
     background-color: base.$background-color;
+    font-size: 1.5em;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    
 }
 .titleBox{
-    position: relative;
+    position: relative; 
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+.homeButton{
+    cursor: pointer;
+    &:hover{
+        color: base.$secondary-color;
+    }
+}
+.project-button{
+    margin-top: 0%;
+    font-size: 0.4em;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    padding: 0.1rem 0.1em 0.1em 0.1em;
+    border-color: base.$primary-color;
+    color: base.$secondary-color;
+    &:hover{
+        background-color: base.$primary-color;
+        color: base.$background-color;
+    }
 }
