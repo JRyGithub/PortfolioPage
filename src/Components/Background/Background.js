@@ -6,23 +6,13 @@ const particleOptions = {
   autoPlay: true,
   background: {
     color: {
-      value: "#017883", //These is key variable to change.
+      value: "#FFAD00", //These is key variable to change.
     },
     image: "",
     position: "",
     repeat: "",
     size: "",
     opacity: 1,
-  },
-  backgroundMask: {
-    composite: "destination-out",
-    cover: {
-      color: {
-        value: "#fff",
-      },
-      opacity: 1,
-    },
-    enable: false,
   },
   backgroundMode: {
     enable: false,
@@ -128,7 +118,7 @@ const particleOptions = {
         quantity: 1,
         particles: {
           color: {
-            value: "#FFAD00", //Trail
+            value: "#02ABBB", //Trail
             animation: {
               enable: false,
               speed: 400,
@@ -213,7 +203,7 @@ const particleOptions = {
           },
           stroke: {
             color: {
-              value: "#FFAD00", //Test Fail
+              value: "#02ABBB", //Test Fail
               animation: {
                 enable: false,
                 speed: 0,
@@ -230,91 +220,36 @@ const particleOptions = {
     },
   },
   particles: {
-    bounce: {
-      horizontal: {
-        random: {
-          enable: false,
-          minimumValue: 0.1,
-        },
-        value: 1,
-      },
-      vertical: {
-        random: {
-          enable: false,
-          minimumValue: 0.1,
-        },
-        value: 1,
-      },
-    },
-    collisions: {
-      bounce: {
-        horizontal: {
-          random: {
-            enable: false,
-            minimumValue: 0.1,
-          },
-          value: 1,
-        },
-        vertical: {
-          random: {
-            enable: false,
-            minimumValue: 0.1,
-          },
-          value: 1,
-        },
-      },
-      enable: true,
-      mode: "bounce",
-    },
     color: {
-      value: "#FFAD00", //Joins
+      value: "#02ABBB", //Joins
       animation: {
         enable: true,
         speed: 50,
-        sync: false,
-      },
-    },
-    life: {
-      count: 0,
-      delay: {
-        random: {
-          enable: false,
-          minimumValue: 0,
-        },
-        value: 0,
-        sync: false,
-      },
-      duration: {
-        random: {
-          enable: false,
-          minimumValue: 0.0001,
-        },
-        value: 0,
-        sync: false,
+        sync: true,
       },
     },
     links: {
       blink: false,
       color: {
-        value: "#FFAD00", //Changes Lines
+        value: "#02ABBB", //Changes Lines
       },
       consent: false,
       distance: 100,
       enable: true,
-      frequency: 1,
+      frequency: 5,
       opacity: 1,
       shadow: {
-        blur: false,
+        blur: true,
         color: {
-          value: "", //Can give like a show/blur
+          value: "#02ABBB", //Can give like a show/blur
         },
         enable: true,
       },
       triangles: {
-        enable: false,
+        enable: true,
         frequency: 1,
         color: {
-          value: "#3500D3", //Test Fail
+          value: "#02ABBB", //Test Fail
         },
       },
       width: 3,
@@ -326,7 +261,7 @@ const particleOptions = {
         value: 90,
       },
       attract: {
-        enable: false,
+        enable: true,
         rotate: {
           x: 3000,
           y: 3000,
@@ -361,7 +296,7 @@ const particleOptions = {
         enable: false,
         length: 10,
         fillColor: {
-          value: "#3500D3", //Test
+          value: "#02ABBB", //Test
         },
       },
       vibrate: false,
@@ -407,7 +342,7 @@ const particleOptions = {
     shadow: {
       blur: 0,
       color: {
-        value: "#3500D3", //Test
+        value: "#02ABBB", //Test
       },
     },
   },

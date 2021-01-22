@@ -1,4 +1,4 @@
-@use './base';
+@use '../Global/base';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 h1 {
@@ -52,30 +52,35 @@ html, body {
   }
 }
 .cta-btn--title {
-    background-image: linear-gradient(135deg, base.$secondary-color 0%, base.$secondary-color 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background-image: linear-gradient(135deg, base.$secondary-color 0%, base.$secondary-color 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     border-width: 2px;
     border-style: solid;
-    border-image: linear-gradient(135deg, base.$secondary-color 0%, base.$secondary-color 100%);
-    border-image-slice: 1;
+    border-color: base.$secondary-color;
+    color: base.$secondary-color;
+    // border-image: linear-gradient(135deg, base.$secondary-color 0%, base.$secondary-color 100%);
+    // border-image-slice: 1;
     cursor: pointer;
-    // Responsive Button hero style
-    
-  
-    &::after {
-      background-image: linear-gradient(135deg, base.$secondary-color 0%, base.$secondary-color 100%);
-      
+    // // Responsive Button hero style
+    &:Hover{
+        background-color: base.$secondary-color;
+        color: white;
     }
   
-    &:hover {
-      -webkit-text-fill-color: base.$white-color;
-      text-decoration: none;
-      // Responsive Button hover hero style
+    // &::after {
+    //   background-image: linear-gradient(135deg, base.$secondary-color 0%, base.$secondary-color 100%);
+      
+    // }
+  
+    // &:hover {
+    //   -webkit-text-fill-color: base.$white-color;
+    //   text-decoration: none;
+    //   // Responsive Button hover hero style
       
   
-      &::after {
-        width: 100%;
-      }
-    }
+    //   &::after {
+    //     width: 100%;
+    //   }
+    // }
 }

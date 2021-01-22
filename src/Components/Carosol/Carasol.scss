@@ -18,12 +18,12 @@
     color: base.$primary-color;
     
     :hover{
-        color: gray;
+        color: base.$secondary-color;
         opacity: 0.2;
         cursor: pointer;
     }
     :focus{
-        color: gray;
+        color: base.$secondary-color;
         opacity: 0.2;
         cursor: pointer;
     }
