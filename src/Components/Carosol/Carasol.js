@@ -1,12 +1,11 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import "./Carasol.scss";
 import { ProjectData } from "../../Data/ProjectData";
 import Card from "../Cards/Card";
 import {
-  BsFillCaretRightFill,
-  BsFillCaretLeftFill,
-  BsArrowRight,
-} from "react-icons/bs";
+  BiChevronRight,
+  BiChevronLeft
+} from "react-icons/bi";
 
 class Carosol extends React.Component {
   constructor(props) {
@@ -44,7 +43,7 @@ class Carosol extends React.Component {
     return (
       <div className="carosolBox w-100">
         <div className="carosol flex flex-wrap">
-          <BsFillCaretLeftFill
+          <BiChevronLeft
             className="icon left"
             onClick={this.previousSlide}
           />
@@ -58,7 +57,7 @@ class Carosol extends React.Component {
               );
             }
           })}
-          <BsFillCaretRightFill
+          <BiChevronRight
             className="icon right"
             onClick={this.nextSlide}
           />

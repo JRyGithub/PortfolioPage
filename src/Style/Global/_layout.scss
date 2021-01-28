@@ -14,7 +14,7 @@ span{
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    position: relative;
+    //position: relative;
     background-color: base.$background-color;
     margin: 0;
     -webkit-font-smoothing: antialiased;
@@ -22,10 +22,9 @@ body {
 }
 html, body {
     min-height: 100vh;
-    //height:100%;
     padding: 0;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
 }
 
 //Button CSS
@@ -67,20 +66,4 @@ html, body {
         background-color: base.$secondary-color;
         color: white;
     }
-  
-    // &::after {
-    //   background-image: linear-gradient(135deg, base.$secondary-color 0%, base.$secondary-color 100%);
-      
-    // }
-  
-    // &:hover {
-    //   -webkit-text-fill-color: base.$white-color;
-    //   text-decoration: none;
-    //   // Responsive Button hover hero style
-      
-  
-    //   &::after {
-    //     width: 100%;
-    //   }
-    // }
-}
+  }

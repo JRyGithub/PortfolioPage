@@ -24,7 +24,7 @@ const particleOptions = {
     cure: false,
     delay: 0,
     enable: false,
-    infections: 0,
+    infections: 1,
     stages: [],
   },
   interactivity: {
@@ -158,7 +158,7 @@ const particleOptions = {
             trail: {},
           },
           size: {
-            value: 5,
+            value: 10,
             animation: {
               enable: true,
               speed: 5,

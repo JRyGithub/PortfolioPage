@@ -1,4 +1,4 @@
-import * as React from "react"; 
+/*import * as React from "react"; 
 import './Button.scss';
 
 const Button = ({ onRouteChange}) => {
@@ -9,4 +9,4 @@ const Button = ({ onRouteChange}) => {
 //
 
 //cta-btn cta-btn--title
-export default Button;
+export default Button;*/

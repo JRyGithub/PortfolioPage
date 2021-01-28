@@ -1,20 +1,36 @@
 @use '../../Style/Global/base';
 
-.link{
-    color: base.$primary-color;
-}
+
 .footer{
-    position: fixed;
+    height: 100%;
+}
+.innerFooter{
     display: flex;
     justify-content: center;
     text-align: center;
-    width:100%;
-    left: 0;
+    position: absolute;
     bottom: 0;
+    width: 100%;
+    padding-bottom: .1em; 
+}
+/*.link{
+    color: base.$primary-color;
+}
+.footerDiv{
+    height:100%;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
    
 .footerIcon{
     padding-bottom: 0%;
-    bottom: 0;
+    bottom: 0px;
     margin-bottom: 0%;
-}
+}*/

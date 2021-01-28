@@ -1,12 +1,22 @@
-import * as React from "react";
+import React from "react";
 import FadeIn from "react-fade-in";
-import Button from "../Button/Button";
 import "./Title.scss";
 
 class Title extends React.Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyDown);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyDown);
+  }
+  handleKeyDown = (event) => {
+    if (event.which === 13) {
+      this.props.onRouteChange("carousel");
+    } 
+  };
   render() {
     const { onRouteChange } = this.props;
     return (

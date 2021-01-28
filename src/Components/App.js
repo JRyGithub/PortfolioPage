@@ -27,7 +27,7 @@ class  App extends React.Component {
     render(){
         const {route} = this.state;
         return (
-            <div className="App vh-100 w-100">
+            <div className="App">
                 <Background />
                 {
                     route === 'title' ?
@@ -49,3 +49,5 @@ class  App extends React.Component {
 }
 
 export default App
+
+//App did have vh-100 w-100
