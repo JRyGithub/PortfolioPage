@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Carasol.scss";
 import { ProjectData } from "../../Data/ProjectData";
 import Card from "../Cards/Card";
@@ -7,64 +7,59 @@ import {
   BiChevronLeft
 } from "react-icons/bi";
 
-class Carosol extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      projectData: ProjectData,
-      length: ProjectData.length,
-    };
-  }
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyDown);
-  }
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown);
-}
+function Carosol() {
+  const [projectData, setProjectData] = useState(ProjectData);
 
-  handleKeyDown = (event) => {
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+  },[])
+
+  const handleKeyDown = (event) => {
     if (event.which === 39) {
-      this.nextSlide();
+      nextSlide();
     } else if (event.which === 37) {
-      this.previousSlide();
+      previousSlide();
     }
   };
 
-  nextSlide = () => {
-    this.state.projectData.unshift(this.state.projectData.pop());
-    this.setState(this.state.projectData);
+  const nextSlide = () => {
+    console.log(projectData);
+    console.log("next");
+    projectData.unshift(projectData.pop());
+    setProjectData(projectData);
   };
-  previousSlide = () => {
-    this.state.projectData.push(this.state.projectData.shift());
-    this.setState(this.state.projectData);
+  const previousSlide = () => {
+    console.log("prev");
+    projectData.push(projectData.shift());
+    setProjectData(projectData);
   };
 
-  render() {
-    return (
-      <div className="carosolBox w-100">
-        <div className="carosol flex flex-wrap">
-          <BiChevronLeft
-            className="icon left"
-            onClick={this.previousSlide}
-          />
-          {this.state.projectData.map((project, index) => {
-            if (index < 3) {
-              console.log(index);
-              return (
-                <>
-                  <Card project={project} />
-                </>
-              );
-            }
-          })}
-          <BiChevronRight
-            className="icon right"
-            onClick={this.nextSlide}
-          />
-        </div>
+
+  return (
+    <div className="carosolBox w-100">
+      <div className="carosol flex flex-wrap">
+        <BiChevronLeft
+          className="icon left"
+          onClick={previousSlide}
+        />
+        {projectData.map((project, index) => {
+          if (index < 3) {
+            console.log(index);
+            return (
+              <>
+                <Card project={project} />
+              </>
+            );
+          }
+        })}
+        <BiChevronRight
+          className="icon right"
+          onClick={nextSlide}
+        />
       </div>
-    );
-  }
+    </div>
+  );
 }
+
 
 export default Carosol;
