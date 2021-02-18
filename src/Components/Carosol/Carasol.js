@@ -10,41 +10,56 @@ import {
 function Carosol() {
   const [projectData, setProjectData] = useState(ProjectData);
 
+  
+
+  /*const nextSlide = () => {
+    projectData.unshift(projectData.pop());
+    setProjectData([...projectData,projectData]);
+  };*/
+  
+
   useEffect(() => {
+    const rightChev = document.getElementById("rightChev");
+    const leftChev = document.getElementById("leftChev");
+
+    const nextSlide = () => {
+      projectData.unshift(projectData.pop());
+      setProjectData([...projectData,projectData]);
+    };
+
+    const previousSlide = () => {
+    projectData.push(projectData.shift());
+    setProjectData([...projectData, projectData]);
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.which === 39) {
+        nextSlide();
+      } else if (event.which === 37) {
+        previousSlide();
+      }
+    };
+
     document.addEventListener("keydown", handleKeyDown);
+    rightChev.addEventListener("click", nextSlide);
+    leftChev.addEventListener("click", previousSlide);
+
+    
+
   },[])
 
-  const handleKeyDown = (event) => {
-    if (event.which === 39) {
-      nextSlide();
-    } else if (event.which === 37) {
-      previousSlide();
-    }
-  };
-
-  const nextSlide = () => {
-    console.log(projectData);
-    console.log("next");
-    projectData.unshift(projectData.pop());
-    setProjectData(projectData);
-  };
-  const previousSlide = () => {
-    console.log("prev");
-    projectData.push(projectData.shift());
-    setProjectData(projectData);
-  };
+  
 
 
   return (
     <div className="carosolBox w-100">
       <div className="carosol flex flex-wrap">
         <BiChevronLeft
+          id="leftChev"
           className="icon left"
-          onClick={previousSlide}
         />
         {projectData.map((project, index) => {
           if (index < 3) {
-            console.log(index);
             return (
               <>
                 <Card project={project} />
@@ -53,8 +68,8 @@ function Carosol() {
           }
         })}
         <BiChevronRight
+          id="rightChev"
           className="icon right"
-          onClick={nextSlide}
         />
       </div>
     </div>

@@ -3,9 +3,6 @@ import FadeIn from "react-fade-in";
 import "./Title.scss";
 
 class Title extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown);
   }
@@ -31,8 +28,12 @@ class Title extends React.Component {
             <p className="title-button">
               <br />
               <span
+                id="button"
+                role="button"
+                tabIndex={0}
                 className="cta-btn cta-btn--title grow title-button"
                 onClick={() => onRouteChange("carousel")}
+                onKeyDown={() => onRouteChange("carousel")}
               >
                 Discover more
               </span>

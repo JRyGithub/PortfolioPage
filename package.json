@@ -25,6 +25,10 @@
     "react-tilt": "^0.1.4",
     "sass": "^1.32.4",
     "tachyons": "^4.12.0",
-    "tsparticles": "^1.18.11"
+    "tsparticles": "^1.18.11",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
