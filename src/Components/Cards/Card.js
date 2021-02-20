@@ -3,7 +3,7 @@ import Tilt from "react-tilt";
 import "./Card.scss";
 
 const Card = ({ project }) => {
-  const color = project.color;
+  const number = project.number;
   const image = project.image;
   const desc = project.description;
   const urlLink = project.url;
@@ -22,8 +22,9 @@ const Card = ({ project }) => {
                 The tech giant says it is ready to begin planning a quantum
                 computer, a powerful cpu machine that relies on subatomic particles instead
                 of transistors.
-          </p>
+              </p>
               <p className="f6 lh-copy mv0">By Robin Darnell</p>
+              <p className= "center f6 mv0">{`${number}`}/7</p>
             </div>
           </div>
         </a>

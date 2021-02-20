@@ -15,9 +15,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "eslint-plugin-react-hooks": "^1.7.0",
     "gatsby": "^2.26.1",
     "gatsby-plugin-sass": "^3.0.0",
     "react": "^16.13.1",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^16.13.1",
     "react-fade-in": "^2.0.0",
     "react-icons": "^4.1.0",
@@ -25,8 +27,7 @@
     "react-tilt": "^0.1.4",
     "sass": "^1.32.4",
     "tachyons": "^4.12.0",
-    "tsparticles": "^1.18.11",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "tsparticles": "^1.18.11"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^1.7.0"
