@@ -3,5 +3,11 @@
 
 .App{
     height:100vh;
-    padding-bottom: 2.5rem;
+}
+.slideShow {
+    position: relative;
+    top: 22vh;
+    @media screen and (max-width: 600px) {
+        top: 3.5vh;
+      }
 }

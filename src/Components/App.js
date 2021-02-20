@@ -1,6 +1,4 @@
 import * as React from "react";
-import Background from "../Components/Background/Background.js";
-import Footer from "../Components/Footer/Footer.js";
 import Title from '../Components/Title/Title.js';
 import Carasol from '../Components/Carosol/Carasol';
 import ProjectTitle from '../Components/ProjectTitle/ProjectTitle';
@@ -27,22 +25,20 @@ class  App extends React.Component {
     render(){
         const {route} = this.state;
         return (
-            <div className="App">
-                <Background />
+            <div className="App">             
                 {
                     route === 'title' ?
                     <Title onRouteChange={this.onRouteChange}/>
                     :
                     (
                         <span>  
-                            <FadeIn  transitionDuration='3000'>
-                                <Carasol projects={ ProjectData }/>
+                            <FadeIn className="slideShow"  transitionDuration='3000'>
+                                <Carasol  projects={ ProjectData }/>
                                 <ProjectTitle onRouteChange={this.onRouteChange}/>
                             </FadeIn>
                         </span>
                     )
-                }
-                <Footer />
+                }                
             </div>
         )
     }

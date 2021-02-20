@@ -4,17 +4,17 @@
 .carosol{
     justify-content: center;
     align-items: center;
+    
 }
 .carosolBox{
     z-index: 1;
     height: 40%;
     position: relative;
 }
-
 .icon{
     position: relative;
     top:40%;
-    font-size: 5em;
+    font-size: 4vw;
     color: base.$primary-color;
     
     :hover{

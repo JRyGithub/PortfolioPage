@@ -9,27 +9,18 @@ import {
 
 function Carosol() {
   const [projectData, setProjectData] = useState(ProjectData);
-
-  
-
-  /*const nextSlide = () => {
-    projectData.unshift(projectData.pop());
-    setProjectData([...projectData,projectData]);
-  };*/
-  
-
   useEffect(() => {
     const rightChev = document.getElementById("rightChev");
     const leftChev = document.getElementById("leftChev");
 
     const nextSlide = () => {
       projectData.unshift(projectData.pop());
-      setProjectData([...projectData,projectData]);
+      setProjectData([...projectData, projectData]);
     };
 
     const previousSlide = () => {
-    projectData.push(projectData.shift());
-    setProjectData([...projectData, projectData]);
+      projectData.push(projectData.shift());
+      setProjectData([...projectData, projectData]);
     };
 
     const handleKeyDown = (event) => {
@@ -39,17 +30,11 @@ function Carosol() {
         previousSlide();
       }
     };
-
     document.addEventListener("keydown", handleKeyDown);
     rightChev.addEventListener("click", nextSlide);
     leftChev.addEventListener("click", previousSlide);
 
-    
-
-  },[])
-
-  
-
+  }, [])
 
   return (
     <div className="carosolBox w-100">
@@ -58,15 +43,7 @@ function Carosol() {
           id="leftChev"
           className="icon left"
         />
-        {projectData.map((project, index) => {
-          if (index < 3) {
-            return (
-              <>
-                <Card project={project} />
-              </>
-            );
-          }
-        })}
+        <Card className= "cards" project={projectData[0]} />
         <BiChevronRight
           id="rightChev"
           className="icon right"

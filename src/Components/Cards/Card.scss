@@ -1,59 +1,13 @@
 @use '../../Style/Global/base';
 @use '../../Style/Global/layout';
 
-.Tilt{
-    border-width: 10px;
-    border: #EC058E;
-}
-.Tilt-inner{
-    border-width: 10px;
-    border: #EC058E;
-    
-}
-.Tilt:hover{
-    z-index: 3000;
-    :hover{
-        .projectImage{
-            filter:  grayscale(60%);
-            border-width: 10px;
-    border: #EC058E;
-        }
-        .ImageDescription{  
-            filter:  grayscale(0%);
-            opacity: 1;
-            z-index: 3001;
-            filter: none;
-            background-color: rgb(255,255,255,0.8);
-            padding: 1rem;
-        }
-    }
-}
 .projectImage{
     display: block;
     object-fit: cover;
     min-width: 100%;
     min-height: 100%;
     height:40vh;
-    border: 2px solid gray;
+    &:hover{
+    }
 }
-
-.bg-base-offWhite{
-    background-color: white;    
-}
-.bg-base-primary{
-    background-color: base.$primary-color;    
-}
-.bg-base-secondary{
-    background-color: base.$secondary-color;
-}
-.ImageDescription{
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: base.$font-color;
-    text-align: center;
-    font-size: 2rem;
-    border-radius: 25px;
-}   
+ 

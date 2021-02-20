@@ -1,37 +1,38 @@
 @use '../../Style/Global/base';
 @use '../../Style/Global/layout';
 
-.titleSection {
-       position: relative;
-//     min-height: 40vh;
-       height: 40%;
-    align-items: center;
-    border-bottom: 0px;
-    background: base.$background-color;
-    font-weight: 400;
-   
-    padding: 0rem 5.6rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    top: 0;
-    left: 0;  
-    bottom: 0;
-    right: 0;
-    z-index: 10;
 
-    .title-title {
-      font-size: 5em;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: left;
-      z-index: 10;
-      color: base.$font-color;    
-    }
-    .title-button {
-      display: flex;
-      & a {
-        font-size: 2em;
-        }
+.titleSection{
+  position: relative;
+  left: 5vw;
+  right:1vw;
+  top: 15vh;
+  .title-title{
+    margin-bottom: 0%;
+    font-size: 10vh;
+    @media screen and (max-width: 600px) {
+        font-size: 10vw;
       }
-      color: base.$secondary-color;
+    }
+  .title-button{
+    margin-top: 0;
+    margin-left: 1vh;
+    font-size: 3vh;
+    font-weight: bold;
+    border-style: solid;
+    padding: 0.8rem 1em;
+    border-color: base.$primary-color;
+    @media screen and (max-width: 600px) {
+      font-size: 3.5vw;
+    }
+    &:hover{
+      cursor: pointer;
+      border-color: base.$secondary-color;
+      color: base.$tertiary-color;
+      background-color: base.$secondary-color;
+      transition: background-color 500ms linear;
+      -webkit-transition: background-color 500ms linear;
+      -ms-transition: background-color 500ms linear;     
+    }
+  }
 }

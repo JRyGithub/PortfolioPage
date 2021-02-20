@@ -25,7 +25,7 @@ class Title extends React.Component {
               <br />
               Im a developer.
             </h1>
-            <p className="title-button">
+            <p className="title-button-paragraph">
               <br />
               <span
                 id="button"
