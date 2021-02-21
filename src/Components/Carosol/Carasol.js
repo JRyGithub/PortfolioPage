@@ -69,7 +69,7 @@ function Carosol() {
   return (
     <div className="carosolBox w-100">
       <div className="carosol flex flex-wrap">
-        <Card className="cards" project={projectData[slideNumber]} />
+        <Card className="cards" project={projectData[slideNumber]} projectNumTotal={projectData.length} projectNum={slideNumber+1} />
         <BiChevronLeft
           id="leftChev"
           className="icon left"
@@ -90,7 +90,7 @@ function Carosol() {
           id="leftChev"
           className="icon left"
         />
-        <Card className="cards" project={projectData[slideNumber]} />
+        <Card className="cards" project={projectData[slideNumber]} projectNumTotal={projectData.length} projectNum={slideNumber+1} />
         <BiChevronRight
           id="rightChev"
           className="icon right"
