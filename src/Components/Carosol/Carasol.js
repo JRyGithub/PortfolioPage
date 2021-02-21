@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./Carasol.scss";
 import { ProjectData } from "../../Data/ProjectData";
 import Card from "../Cards/Card";
@@ -53,12 +53,13 @@ function Carosol() {
       }
     }
 
-  }, [slideNumber]);
+  }, [slideNumber, isMobile]);
 
   function handleWindowSizeChange() {
-    if (isMobile || window.innerWidth <= 700) {
+    if (isMobile || window.innerWidth <=700 ) {
       setMobileOrNot(true);
-    } else {
+    }
+    else {
       setMobileOrNot(false);
     }
   }
@@ -90,7 +91,7 @@ function Carosol() {
   else {
     return (
       <div className="carosolBox w-100">
-        <div className="carosol flex flex-wrap">
+        <div className="carosol flex">
           <BiChevronLeft
             id="leftChev"
             className="icon left"

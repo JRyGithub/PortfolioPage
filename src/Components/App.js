@@ -2,7 +2,6 @@ import * as React from "react";
 import Title from '../Components/Title/Title.js';
 import Carasol from '../Components/Carosol/Carasol';
 import Header from '../Components/Header/Header';
-import ProjectTitle from '../Components/ProjectTitle/ProjectTitle';
 import'./App.scss';
 
 import { ProjectData } from '../Data/ProjectData';
@@ -46,5 +45,3 @@ class  App extends React.Component {
 }
 
 export default App
-
-//App did have vh-100 w-100
