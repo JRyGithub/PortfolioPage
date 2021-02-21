@@ -18,7 +18,7 @@ const Card = ({ project, projectNum, projectNumTotal }) => {
               </a>
             </div>
             <div className="w-100 w-60-ns pl3-ns imageText">
-              <h1 className="f2 fw6 mt0 lh-title b descriptionTitle">{`${title}`}</h1>
+              <h1 className="f2 fw6 mt0 lh-title b ">{`${title}`}</h1>
               <p className="f6 fw2 f5-l lh-copy">
                 {`${description}`}
               </p>

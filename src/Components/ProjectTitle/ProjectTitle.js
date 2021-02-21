@@ -7,7 +7,8 @@ class ProjectTitle extends React.Component {
     return (
       <div className="titleBox tc">
         <h1 className="f-subline lh-title ta-c mb2 pb2 headlineTitle">
-          <a
+          <a 
+          href=""
           role="button"
           tabIndex={0}
           className="homeButton" 

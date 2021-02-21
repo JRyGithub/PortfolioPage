@@ -58,9 +58,11 @@ function Carosol() {
   function handleWindowSizeChange() {
     if (isMobile || window.innerWidth <=700 ) {
       setMobileOrNot(true);
+      document.body.style.overflow = "visible";
     }
     else {
       setMobileOrNot(false);
+      document.body.style.overflow = "hidden";
     }
   }
 
