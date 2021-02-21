@@ -1,6 +1,7 @@
 import * as React from "react";
 import Title from '../Components/Title/Title.js';
 import Carasol from '../Components/Carosol/Carasol';
+import Header from '../Components/Header/Header';
 import ProjectTitle from '../Components/ProjectTitle/ProjectTitle';
 import'./App.scss';
 
@@ -25,16 +26,16 @@ class  App extends React.Component {
     render(){
         const {route} = this.state;
         return (
-            <div className="App">             
+            <div className="App">                                
                 {
                     route === 'title' ?
                     <Title onRouteChange={this.onRouteChange}/>
                     :
                     (
-                        <span>  
+                        <span>
+                        <Header onRouteChange={this.onRouteChange}/>  
                             <FadeIn className="slideShow"  transitionDuration='3000'>
                                 <Carasol  projects={ ProjectData }/>
-                                <ProjectTitle onRouteChange={this.onRouteChange}/>
                             </FadeIn>
                         </span>
                     )

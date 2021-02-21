@@ -24,6 +24,7 @@
     "react-fade-in": "^2.0.0",
     "react-icons": "^4.1.0",
     "react-particles-js": "^3.4.1",
+    "react-swipeable": "^6.0.1",
     "react-tilt": "^0.1.4",
     "sass": "^1.32.4",
     "tachyons": "^4.12.0",

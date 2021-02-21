@@ -6,7 +6,8 @@ import {
   BiChevronRight,
   BiChevronLeft
 } from "react-icons/bi";
-import { BrowserView, MobileView, isBrowser, isMobile } from "react-device-detect";
+import { isMobile } from "react-device-detect";
+import { useSwipeable } from "react-swipeable";
 
 
 function Carosol() {
@@ -16,15 +17,15 @@ function Carosol() {
 
   function nextSlide() {
     slideNumber === 6 ?
-     setSlideNumber(() => 0)
-    :
-     setSlideNumber(() => slideNumber + 1)
+      setSlideNumber(() => 0)
+      :
+      setSlideNumber(() => slideNumber + 1)
   };
-  function previousSlide (){
+  function previousSlide() {
     slideNumber === 0 ?
-     setSlideNumber(() => 6)
-    :
-     setSlideNumber(() => slideNumber - 1)
+      setSlideNumber(() => 6)
+      :
+      setSlideNumber(() => slideNumber - 1)
   };
 
   useEffect(() => {
@@ -39,65 +40,69 @@ function Carosol() {
       }
     };
     document.addEventListener("keydown", handleKeyDown);
-    rightChev.addEventListener("click", nextSlide);
-    leftChev.addEventListener("click", previousSlide);
+    if (rightChev != null) {
+      rightChev.addEventListener("click", nextSlide);
+      leftChev.addEventListener("click", previousSlide);
+    }
 
-    return ()=>{
+    return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      rightChev.removeEventListener("click", nextSlide);
-      leftChev.removeEventListener("click", previousSlide);
+      if (rightChev != null) {
+        rightChev.removeEventListener("click", nextSlide);
+        leftChev.removeEventListener("click", previousSlide);
+      }
     }
 
   }, [slideNumber]);
 
-  function handleWindowSizeChange(){
-    if(isMobile || window.innerWidth <= 700){
+  function handleWindowSizeChange() {
+    if (isMobile || window.innerWidth <= 700) {
       setMobileOrNot(true);
-    }else{
+    } else {
       setMobileOrNot(false);
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener('resize', handleWindowSizeChange);
-    return () =>{
+    return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
     }
-  },[]);
+  }, []);
 
-  if(mobileOrNot){
-  return (
-    <div className="carosolBox w-100">
-      <div className="carosol flex flex-wrap">
-        <Card className="cards" project={projectData[slideNumber]} projectNumTotal={projectData.length} projectNum={slideNumber+1} />
-        <BiChevronLeft
-          id="leftChev"
-          className="icon left"
-        />
-        <BiChevronRight
-          id="rightChev"
-          className="icon right"
-        />
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => previousSlide(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
+
+  if (mobileOrNot) {
+    return (
+      <div className="carosolBox w-100" {...handlers}>
+        <div className="carosol flex flex-wrap">
+          <Card className="cards" project={projectData[slideNumber]} projectNumTotal={projectData.length} projectNum={slideNumber + 1} />
+        </div>
       </div>
-    </div>
-  )
+    )
   }
-  else{
-  return (
-    <div className="carosolBox w-100">
-      <div className="carosol flex flex-wrap">
-        <BiChevronLeft
-          id="leftChev"
-          className="icon left"
-        />
-        <Card className="cards" project={projectData[slideNumber]} projectNumTotal={projectData.length} projectNum={slideNumber+1} />
-        <BiChevronRight
-          id="rightChev"
-          className="icon right"
-        />
+  else {
+    return (
+      <div className="carosolBox w-100">
+        <div className="carosol flex flex-wrap">
+          <BiChevronLeft
+            id="leftChev"
+            className="icon left"
+          />
+          <Card className="cards" project={projectData[slideNumber]} projectNumTotal={projectData.length} projectNum={slideNumber + 1} />
+          <BiChevronRight
+            id="rightChev"
+            className="icon right"
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
   }
 }
 
