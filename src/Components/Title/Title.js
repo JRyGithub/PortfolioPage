@@ -23,7 +23,7 @@ class Title extends React.Component {
             <h1 className="title-title">
               Hi, My Name is Josh
               <br />
-              Im a developer.
+              I'm a developer.
             </h1>
             <p className="title-button-paragraph">
               <br />
